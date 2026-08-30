@@ -1,0 +1,532 @@
+
+.vellora {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #080b09;
+  color: #f5f1e8;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.vellora-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.vellora-image {
+  position: absolute;
+  inset: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transform: scale(1.08);
+
+  transition:
+    opacity 2.5s ease,
+    transform 8s ease;
+
+  will-change: opacity, transform;
+}
+
+
+/* =====================================================
+   FIVE IMAGES
+===================================================== */
+
+.image-one {
+  background-image: url("./assets/ii.jpg");
+}
+
+.image-two {
+  background-image: url("./assets/pr.jpg");
+}
+
+.image-three {
+  background-image: url("./assets/ppjpg.avif");
+}
+
+.image-four {
+  background-image: url("./assets/op.jpg");
+}
+
+.image-five {
+  background-image: url("./assets/oo.jpg");
+}
+
+
+/* Active image */
+
+.vellora-image.image-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* Slow movement */
+
+.image-active {
+  animation: slowZoom 12s ease-in-out forwards;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.vellora-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.12) 45%,
+      rgba(0, 0, 0, 0.78) 100%
+    );
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.vellora-content {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   STAGES
+===================================================== */
+
+.vellora-stage {
+  position: absolute;
+
+  width: min(820px, 88%);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(25px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease,
+    visibility 1.2s ease;
+}
+
+.vellora-stage.stage-active {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.vellora-eyebrow {
+  margin-bottom: 24px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 300;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =====================================================
+   MAIN TEXT
+===================================================== */
+
+.vellora-stage h1,
+.vellora-stage h2 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-weight: 400;
+
+  line-height: 1.08;
+}
+
+
+/* Opening text */
+
+.vellora-stage h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+
+/* Other cinematic text */
+
+.vellora-stage h2 {
+  font-size: clamp(2.2rem, 5vw, 5rem);
+}
+
+
+.vellora-stage em {
+ 
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =====================================================
+   VELLORA LOGO
+===================================================== */
+
+.vellora-logo {
+  font-family: Georgia, serif;
+
+  font-size: clamp(2.5rem, 6vw, 5rem) !important;
+
+  font-weight: 250;
+
+  letter-spacing: 0.06em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =====================================================
+   VELLORA SUBTITLE
+===================================================== */
+
+.vellora-subtitle {
+  margin-top: 25px;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
+
+  font-style: italic;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+.vellora-description {
+  margin-top: 15px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.85rem;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* =====================================================
+   FINAL STAGE
+===================================================== */
+
+.vellora-final-stage {
+  width: min(760px, 88%);
+}
+
+
+.vellora-final-tagline {
+  margin-top: 20px;
+
+  font-size: clamp(1rem, 2vw, 1.6rem);
+
+  font-style: italic;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* =====================================================
+   COMING SOON
+===================================================== */
+
+.coming-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin: 30px 0 22px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.32em;
+}
+
+
+.coming-text span {
+  width: 40px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.45);
+}
+
+
+/* =====================================================
+   EMAIL
+===================================================== */
+
+.vellora-final-stage .email-box {
+  width: min(480px, 100%);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+}
+
+
+.vellora-final-stage .email-box input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 14px 17px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+}
+
+
+.vellora-final-stage .email-box input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+.vellora-final-stage .email-box button {
+  padding: 14px 22px;
+
+  border: none;
+
+  cursor: pointer;
+
+  background: #f5f1e8;
+
+  color: #111;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.7rem;
+
+  font-weight: 550;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  transition: background 0.3s ease;
+}
+
+
+.vellora-final-stage .email-box button:hover {
+  background: #d9d2c4;
+}
+
+
+.vellora-note {
+  margin-top: 13px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.65rem;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.vellora .footer {
+  position: absolute;
+
+  z-index: 10;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 15px 5%;
+
+  background: transparent;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 0.65rem;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .vellora-stage {
+    width: 88%;
+  }
+
+  .vellora-eyebrow {
+    font-size: 0.50rem;
+    letter-spacing: 0.22em;
+  }
+
+  .vellora-stage h1 {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+
+  .vellora-stage h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .vellora-logo {
+    font-size: clamp(2.3rem, 13vw, 4rem) !important;
+    letter-spacing: 0.04em;
+  }
+
+  .vellora-subtitle {
+    font-size: 1.12rem;
+  }
+
+  .vellora-description {
+    font-size: 0.78rem;
+  }
+
+  .vellora-final-stage .email-box {
+    flex-direction: column;
+
+    border: none;
+
+    background: transparent;
+
+    gap: 8px;
+  }
+
+  .vellora-final-stage .email-box input {
+    width: 100%;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .vellora-final-stage .email-box button {
+    width: 100%;
+  }
+
+  .vellora .footer {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    text-align: center;
+  }
+}
+
+.vellora-letter {
+  display: inline-block;
+
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  filter: blur(5px);
+}
+
+
+.stage-active .vellora-letter {
+  animation: velloraLetterReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+@keyframes velloraLetterReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+}
+
