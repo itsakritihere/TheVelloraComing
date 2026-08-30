@@ -1,3 +1,6 @@
+
+import toast from "react-hot-toast";
+
 function EmailSignup() {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -5,12 +8,12 @@ function EmailSignup() {
     const email = event.target.email.value;
 
     if (!email) {
-      alert("Please enter your email address.");
+      toast.error("Please enter your email address.");
       return;
     }
 
-    alert("Successfully sent! You are now on The Vellora list.");
-    
+    toast.success("Thanks for joining The Vellora. We're excited to have you with us - stay tuned for what's next");
+
     event.target.reset();
   };
 
@@ -32,3 +35,4 @@ function EmailSignup() {
 }
 
 export default EmailSignup;
+
