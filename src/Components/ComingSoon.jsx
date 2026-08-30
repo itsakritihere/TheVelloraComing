@@ -187,8 +187,13 @@ function ComingSoon() {
             COMING SOON
             <span />
           </div>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
 
           <EmailSignup />
+          <br/>
 
           <p className="vellora-note">
             Be the first to know when we open our doors.
