@@ -29,7 +29,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  opacity: 0;
+  opacity: 0.2;
   transform: scale(1.08);
 
   transition:
@@ -45,19 +45,19 @@
 ===================================================== */
 
 .image-one {
-  background-image: url("./assets/ii.jpg");
-}
-
-.image-two {
   background-image: url("./assets/pr.jpg");
 }
 
+.image-two {
+  background-image: url("./assets/ii.jpg");
+}
+
 .image-three {
-  background-image: url("./assets/ppjpg.avif");
+  background-image: url("./assets/op.jpg");
 }
 
 .image-four {
-  background-image: url("./assets/op.jpg");
+  background-image: url("./assets/aa.jpg");
 }
 
 .image-five {
@@ -165,8 +165,8 @@
 
   font-family: Arial, sans-serif;
 
-  font-size: 0.65rem;
-  font-weight: 300;
+  font-size: 0.80rem;
+  font-weight: 400;
 
   letter-spacing: 0.3em;
 
@@ -221,9 +221,9 @@
 .vellora-logo {
   font-family: Georgia, serif;
 
-  font-size: clamp(2.5rem, 6vw, 5rem) !important;
+  font-size: clamp(2.1rem, 5vw, 4.5rem) !important;
 
-  font-weight: 250;
+  font-weight: 200;
 
   letter-spacing: 0.06em;
 
@@ -390,9 +390,9 @@
 
   font-family: Arial, sans-serif;
 
-  font-size: 0.65rem;
+  font-size: 0.87rem;
 
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(247, 242, 242, 0.42);
 }
 
 
