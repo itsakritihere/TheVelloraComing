@@ -121,9 +121,7 @@ function ComingSoon() {
             stage === 2 ? "stage-active" : ""
           }`}
         >
-          <p className="vellora-eyebrow">
-            SOMETHING EXTRAORDINARY IS COMING
-          </p>
+          
 
           <h2>
             We are bringing you
